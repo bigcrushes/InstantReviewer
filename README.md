@@ -9,3 +9,8 @@ Install the dependencies using
 `pip install -r requirements.txt`
 
 Then, run `app.py` and visit the localhost link provided!
+
+## Future plans
+- Delete wordclouds after generating webpages
+- Improve UI/UX
+- Include back button/allow searching again more easily

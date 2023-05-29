@@ -15,8 +15,8 @@ def answer_query(query):
    sentiments = get_sentiment(query)
    # Get comparison of positive vs negative sentiment
    total_sentiments = sentiments["positive"] + sentiments["negative"]
-   positive_rate = sentiments["positive"] / total_sentiments
-   return render_template('query.html', query=query.upper(), sentiments=positive_rate)
+   positive_rate = sentiments["positive"] / total_sentiments * 100
+   return render_template('query.html', query=query.upper(), sentiments=round(positive_rate,2))
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,8 +1,23 @@
 <html>
-  <h3>{{query}} SENTIMENTS</h3>
-  <body>
-    <img src="{{url_for('static', filename='pokemon violet_positive.png')}}" alt="No reviews found" width="700" height="600">
-    <img src="{{url_for('static', filename='pokemon violet_neutral.png')}}" alt="No reviews found" width="700" height="600">
-    <img src="{{url_for('static', filename='pokemon violet_negative.png')}}" alt="No reviews found" width="700" height="600">
-  </body>
+    <style>
+        div {
+            text-align: center;
+        }
+        html {
+            background-color: #E18470;
+        }
+    </style>
+    <div>
+        <p style="font-family:'Courier New'; font-size:80px" >{{query}} SENTIMENTS</p>
+        <br>
+        <body>
+            <img src="{{url_for('static', filename='{}_positive.png'.format(query))}}" alt="No reviews found" width="700" height="600" >
+            <br>
+            <img src="{{url_for('static', filename='{}_negative.png'.format(query))}}" alt="No reviews found" width="700" height="600" class="centerImage">
+            <br>
+            <img src="{{url_for('static', filename='{}_neutral.png'.format(query))}}" alt="No reviews found" width="700" height="600" class="centerImage">
+            <br>
+            <p style="font-family:'Courier New'; font-size:80px" >Overall Positive Sentiment: {{sentiments}}%</p>
+        </body>
+    </div>
 </html>

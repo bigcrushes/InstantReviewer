@@ -1,11 +1,30 @@
 <html>
-  <head></head>
-  <body>
-    <h3>Home page</h3>
-    <form action="/" method="post">
-      <label for="query">Query: </label>
-      <input type="query" id="query" name="query">
-      <input type="submit" value="Submit">
-    </form>
-  </body>
+    <style>
+        div {
+            text-align: center;
+        }
+        html {
+            background-color: #E18470;
+        }
+        .textbox {
+            border-radius: 25px;
+            width: 100%;
+            height: 50px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8;
+        }
+    </style>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+    <div>
+        <p style="font-family:'calibri'; font-size:30px">Welcome to InstantReviewer! The place to get reviews in just a few seconds! </p>
+        <p style="font-family:'calibri'; font-size:30px">Enter the product/company you would like to review below!</p>
+        <form action="/" method="post">
+        <label style="font-family:'calibri'; font-size:30px" for="query">Query: </label>
+        <input class="textbox" type="query" id="query" name="query">
+        <input type="submit" value="Submit">
+        </form>
+    </div>
 </html>
